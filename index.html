@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio of Sai Saran Tottempudi, AI and Data Analytics graduate, MLOps builder, and Production Manager at Gaia Pulses."
+      content="Portfolio of Sai Saran Tottempudi — ML engineer building end-to-end MLOps platforms, RAG systems, MCP servers, and production ML APIs."
     />
-    <title>Sai Saran Tottempudi | AI & Data Portfolio</title>
+    <title>Sai Saran Tottempudi | ML Engineering & MLOps Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="grain" aria-hidden="true"></div>
     <div class="cursor-dot" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="#about" aria-label="Sai Saran Tottempudi profile">
@@ -37,14 +38,15 @@
         <canvas id="hero-canvas" aria-hidden="true"></canvas>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow" data-reveal>AI, data analytics, MLOps, and operations</p>
+          <p class="eyebrow" data-reveal>MLOps · LLM systems · Data engineering</p>
           <h1 data-reveal>
-            Turning messy operational problems into deployable AI systems.
+            I build the machinery around the model — not just the model.
           </h1>
           <p class="hero-copy" data-reveal>
-            I&apos;m Sai Saran Tottempudi, an MSc AI and Data Analytics graduate
-            and Production Manager at Gaia Pulses, building practical AI
-            systems, RAG pipelines, ML APIs, and automation workflows.
+            I&apos;m Sai Saran Tottempudi, an MSc AI &amp; Data Analytics graduate
+            building production ML systems: automated train-serve-monitor-retrain
+            pipelines, RAG platforms on Kubernetes, MCP servers for Claude, and
+            calibrated statistical models behind real APIs.
           </p>
           <div class="hero-actions" data-reveal>
             <a class="button primary" href="#work">Explore work</a>
@@ -52,8 +54,8 @@
           </div>
         </div>
         <aside class="hero-panel" data-reveal aria-label="Current focus">
-          <span class="panel-kicker">Currently crafting</span>
-          <strong>Portfolio projects across RAG, MLOps, RL, regulated ML, NLP, and data automation.</strong>
+          <span class="panel-kicker">Latest ship</span>
+          <strong>readmit-ai — end-to-end MLOps platform: drift detection, champion/challenger registry, auto-retrain. One <code>docker compose up</code>.</strong>
           <div class="signal-row">
             <span></span>
             <span></span>
@@ -65,12 +67,12 @@
 
       <section class="metrics" aria-label="Portfolio metrics">
         <div data-reveal>
-          <strong data-count="11">0</strong>
+          <strong data-count="20">0</strong>
           <span>Portfolio projects on GitHub</span>
         </div>
         <div data-reveal>
-          <strong data-count="77">0</strong>
-          <span>Tests in healthcare GLM project</span>
+          <strong data-count="3">0</strong>
+          <span>Open-source MCP servers for Claude</span>
         </div>
         <div data-reveal>
           <strong data-count="2">0</strong>
@@ -81,21 +83,21 @@
       <section class="section intro" id="about">
         <div class="section-heading" data-reveal>
           <p class="eyebrow">Profile</p>
-          <h2>AI &amp; Data graduate building practical systems for real operations.</h2>
+          <h2>From notebook to production: ML systems that keep working after the demo.</h2>
         </div>
         <p class="intro-copy" data-reveal>
           I&apos;m an MSc Artificial Intelligence and Data Analytics graduate from
           Loughborough University London, with a BTech in Computer Science
-          Engineering from SRM University. My work connects AI engineering with
-          practical delivery: RAG systems, FastAPI model APIs, NLP experiments,
-          statistical modelling, and Python automation.
+          Engineering from SRM University. My work covers the full ML lifecycle:
+          data validation, training pipelines, model registries, drift
+          monitoring, explainable serving, and the CI/CD and observability that
+          hold it all together.
           <br /><br />
-          At Gaia Pulses, I moved from data analysis and automation into
-          production management, using Python, Excel, Jira, and Google Workspace
-          automations to support day-to-day decisions. My strongest portfolio
-          work includes DocuMind, Serverless Image Recognition, Healthcare
-          Claims GLM, Credit Risk Profit Engine, SupportIQ, Telugu Text
-          Summarization, Expense Tracker 2026, and F1 analytics projects.
+          Recent work includes readmit-ai (an end-to-end MLOps platform with
+          automated retraining), QuantForge (a language-agnostic backtesting
+          engine), FinSight (real-time risk and fraud analytics on a k3s
+          cluster), a suite of three MCP servers for Claude, and llmscope
+          (LLM inference benchmarking across providers).
         </p>
       </section>
 
@@ -114,17 +116,109 @@
         </div>
         <div data-reveal>
           <span>Focus</span>
-          <strong>AI, Data, MLOps, Automation</strong>
+          <strong>MLOps, LLM Systems, Data, Cloud</strong>
         </div>
       </section>
 
       <section class="section work" id="work">
         <div class="section-heading" data-reveal>
           <p class="eyebrow">Selected work</p>
-          <h2>Real projects from my GitHub and research portfolio.</h2>
+          <h2>Real systems from my GitHub — shipped, containerised, monitored.</h2>
         </div>
         <div class="project-carousel-shell" data-reveal>
         <div class="project-carousel" aria-label="Project carousel">
+          <article class="project-card" data-reveal>
+            <div class="project-visual project-shot shot-readmit" aria-hidden="true">
+              <span>MLOps</span>
+              <strong>readmit-ai</strong>
+              <em>train -> monitor -> retrain</em>
+            </div>
+            <div class="project-body">
+              <p>End-to-end MLOps</p>
+              <h3>readmit-ai</h3>
+              <span>Hospital readmission risk platform with the full automated lifecycle: pandera-validated ingest, XGBoost + SHAP, MLflow champion/challenger registry, Evidently drift detection, and auto-retrain — eight containers, one compose file.</span>
+              <div class="project-links" aria-label="readmit-ai project links">
+                <a class="button secondary" href="https://github.com/saisarantottempudi/readmit-ai" target="_blank" rel="noreferrer">saisarantottempudi/readmit-ai</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-visual project-shot shot-quant" aria-hidden="true">
+              <span>Quant</span>
+              <strong>QuantForge</strong>
+              <em>any language -> backtest</em>
+            </div>
+            <div class="project-body">
+              <p>Backtesting engine</p>
+              <h3>QuantForge</h3>
+              <span>Language-agnostic backtesting and paper trading engine — write strategies in Python, Go, or TypeScript over WebSocket; the engine handles data, fills with slippage and fees, and reports Sharpe, drawdown, and VaR.</span>
+              <div class="project-links" aria-label="QuantForge project links">
+                <a class="button secondary" href="https://github.com/saisarantottempudi/quantforge" target="_blank" rel="noreferrer">saisarantottempudi/quantforge</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-visual project-shot shot-finsight" aria-hidden="true">
+              <span>Fintech</span>
+              <strong>FinSight</strong>
+              <em>risk + fraud, live</em>
+            </div>
+            <div class="project-body">
+              <p>Cloud-native platform</p>
+              <h3>FinSight</h3>
+              <span>Real-time portfolio risk (VaR, Sharpe, drawdown) and IsolationForest fraud scoring on live market data — deployed to an Oracle Cloud ARM k3s cluster with Grafana Cloud observability, entirely on free tiers.</span>
+              <div class="project-links" aria-label="FinSight project links">
+                <a class="button secondary" href="https://github.com/saisarantottempudi/finsight" target="_blank" rel="noreferrer">saisarantottempudi/finsight</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-visual project-shot shot-mcp" aria-hidden="true">
+              <span>MCP</span>
+              <strong>MCP Suite</strong>
+              <em>3 servers for Claude</em>
+            </div>
+            <div class="project-body">
+              <p>AI tooling</p>
+              <h3>MCP Server Suite</h3>
+              <span>Three Model Context Protocol servers: RAG over a personal knowledge base (ChromaDB), job-description gap analysis with a 150+ term skill taxonomy, and Terraform/Docker/K8s security scanning.</span>
+              <div class="project-links" aria-label="MCP server suite links">
+                <a class="button secondary" href="https://github.com/saisarantottempudi/rag-profile-mcp" target="_blank" rel="noreferrer">rag-profile-mcp</a>
+                <a class="button secondary" href="https://github.com/saisarantottempudi/jd-gap-analyzer-mcp" target="_blank" rel="noreferrer">jd-gap-analyzer-mcp</a>
+                <a class="button secondary" href="https://github.com/saisarantottempudi/iac-explainer-mcp" target="_blank" rel="noreferrer">iac-explainer-mcp</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-visual project-shot shot-llmscope" aria-hidden="true">
+              <span>LLM Ops</span>
+              <strong>llmscope</strong>
+              <em>TTFT + p99 + cost</em>
+            </div>
+            <div class="project-body">
+              <p>LLM benchmarking</p>
+              <h3>llmscope</h3>
+              <span>LLM inference benchmarking CLI measuring time-to-first-token, p50/p95/p99 latency, throughput, and cost per inference across Anthropic, OpenAI, and local Ollama models — with concurrent load testing.</span>
+              <div class="project-links" aria-label="llmscope project links">
+                <a class="button secondary" href="https://github.com/saisarantottempudi/llmscope" target="_blank" rel="noreferrer">saisarantottempudi/llmscope</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-visual project-shot shot-mickey" aria-hidden="true">
+              <span>Local AI</span>
+              <strong>MICKEY</strong>
+              <em>voice -> Ollama -> action</em>
+            </div>
+            <div class="project-body">
+              <p>Local AI assistant</p>
+              <h3>MICKEY</h3>
+              <span>Jarvis-inspired voice assistant running 100% locally on Apple Silicon — wake word, macOS system control, conversation memory, smart 3B/8B model routing, Three.js HUD, and cross-device access via Tailscale.</span>
+              <div class="project-links" aria-label="MICKEY project links">
+                <a class="button secondary" href="https://github.com/saisarantottempudi/MICKEY" target="_blank" rel="noreferrer">saisarantottempudi/MICKEY</a>
+              </div>
+            </div>
+          </article>
           <article class="project-card" data-reveal>
             <div class="project-visual project-shot shot-documind" aria-hidden="true">
               <span>RAG</span>
@@ -132,26 +226,26 @@
               <em>PDF -> embeddings -> answer</em>
             </div>
             <div class="project-body">
-              <p>RAG + MLOps</p>
+              <p>RAG + Kubernetes</p>
               <h3>DocuMind</h3>
-              <span>Production RAG document Q&amp;A system with FastAPI, LangChain, ChromaDB, Redis, Docker, Kubernetes, Helm, Terraform, Prometheus, and Grafana.</span>
+              <span>Production RAG document Q&amp;A system with FastAPI, LangChain, ChromaDB, Redis, and Ollama — deployed to Kubernetes with Helm, Terraform IaC, HPA autoscaling, and a Trivy-scanned CI/CD pipeline.</span>
               <div class="project-links" aria-label="DocuMind project links">
                 <a class="button secondary" href="https://github.com/saisarantottempudi/documind" target="_blank" rel="noreferrer">saisarantottempudi/documind</a>
               </div>
             </div>
           </article>
           <article class="project-card" data-reveal>
-            <div class="project-visual project-shot shot-serverless" aria-hidden="true">
-              <span>GCP</span>
-              <strong>Image API</strong>
-              <em>GCS -> TFLite -> GPT</em>
+            <div class="project-visual project-shot shot-support" aria-hidden="true">
+              <span>AI Ops</span>
+              <strong>SupportIQ</strong>
+              <em>ticket -> Claude -> reply</em>
             </div>
             <div class="project-body">
-              <p>Serverless ML</p>
-              <h3>Serverless Image Recognition API</h3>
-              <span>Event-driven GCP Cloud Functions Gen2 pipeline that classifies images with MobileNetV2 TFLite, generates captions with OpenAI GPT, and writes JSON results to Cloud Storage.</span>
-              <div class="project-links" aria-label="Serverless Image Recognition API links">
-                <a class="button secondary" href="https://github.com/saisarantottempudi/serverless_image_rec" target="_blank" rel="noreferrer">saisarantottempudi/serverless_image_rec</a>
+              <p>AI engineering</p>
+              <h3>SupportIQ</h3>
+              <span>AI support-ticket triage platform: Claude classifies category, priority, and sentiment and drafts replies asynchronously via Celery — FastAPI, Redis, PostgreSQL, React + TypeScript, green CI.</span>
+              <div class="project-links" aria-label="SupportIQ links">
+                <a class="button secondary" href="https://github.com/saisarantottempudi/supportiq" target="_blank" rel="noreferrer">saisarantottempudi/supportiq</a>
               </div>
             </div>
           </article>
@@ -159,29 +253,14 @@
             <div class="project-visual project-shot shot-glm" aria-hidden="true">
               <span>GLM</span>
               <strong>Claims Model</strong>
-              <em>Frequency x severity</em>
+              <em>frequency x severity</em>
             </div>
             <div class="project-body">
               <p>Insurance data science</p>
               <h3>Healthcare Claims GLM</h3>
-              <span>Poisson + Gamma GLM insurance pricing project with pure premium modelling, Gini 0.60, FastAPI serving, MLflow, Docker, and 77 tests.</span>
+              <span>Poisson + Gamma GLM insurance pricing with pure premium modelling, Gini 0.60, FastAPI serving, MLflow tracking, Docker, and 77 tests — the actuarial two-part model used by real insurers.</span>
               <div class="project-links" aria-label="Healthcare Claims GLM links">
                 <a class="button secondary" href="https://github.com/saisarantottempudi/healthcare-claims-glm" target="_blank" rel="noreferrer">saisarantottempudi/healthcare-claims-glm</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card" data-reveal>
-            <div class="project-visual project-shot shot-olist" aria-hidden="true">
-              <span>EDA</span>
-              <strong>Olist Commerce</strong>
-              <em>9 tables -> sentiment ML</em>
-            </div>
-            <div class="project-body">
-              <p>E-commerce analytics</p>
-              <h3>Olist E-Commerce EDA</h3>
-              <span>Brazilian e-commerce analysis joining 9 CSV tables into a 100k+ row master dataset, with 20+ charts, feature engineering, and review sentiment prediction using five classifiers.</span>
-              <div class="project-links" aria-label="Olist E-Commerce EDA links">
-                <a class="button secondary" href="https://github.com/saisarantottempudi/olist-ecommerce-eda" target="_blank" rel="noreferrer">saisarantottempudi/olist-ecommerce-eda</a>
               </div>
             </div>
           </article>
@@ -194,54 +273,9 @@
             <div class="project-body">
               <p>Credit risk ML</p>
               <h3>Credit Risk Profit Engine</h3>
-              <span>End-to-end credit risk and profit decisioning system with calibrated PD, expected loss, approval logic, portfolio analytics, and FastAPI scoring.</span>
+              <span>End-to-end credit decisioning: calibrated PD (isotonic calibration cut Brier from 0.156 to 0.062), expected loss, risk-based APR, portfolio analytics, and FastAPI scoring.</span>
               <div class="project-links" aria-label="Credit Risk Profit Engine links">
                 <a class="button secondary" href="https://github.com/saisarantottempudi/credit_risk_profit_engine" target="_blank" rel="noreferrer">saisarantottempudi/credit_risk_profit_engine</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card" data-reveal>
-            <div class="project-visual project-shot shot-support" aria-hidden="true">
-              <span>AI Ops</span>
-              <strong>SupportIQ</strong>
-              <em>Ticket -> Claude -> reply</em>
-            </div>
-            <div class="project-body">
-              <p>AI engineering</p>
-              <h3>SupportIQ</h3>
-              <span>AI support-ticket triage platform with FastAPI, Claude, Celery, Redis, PostgreSQL, React, TypeScript, Docker, and green CI.</span>
-              <div class="project-links" aria-label="SupportIQ links">
-                <a class="button secondary" href="https://github.com/saisarantottempudi/supportiq" target="_blank" rel="noreferrer">saisarantottempudi/supportiq</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card" data-reveal>
-            <div class="project-visual project-shot shot-telugu" aria-hidden="true">
-              <span>NLP</span>
-              <strong>Telugu Summary</strong>
-              <em>mBERT + T5 + XLNet</em>
-            </div>
-            <div class="project-body">
-              <p>NLP research</p>
-              <h3>Telugu Text Summarization</h3>
-              <span>Transformer comparison for low-resource Telugu summarization using mBERT, T5, XLNet, PyTorch, Hugging Face, BLEU, and ROUGE.</span>
-              <div class="project-links" aria-label="Telugu Text Summarization links">
-                <a class="button secondary" href="https://github.com/saisarantottempudi/telugu-text-summarization" target="_blank" rel="noreferrer">saisarantottempudi/telugu-text-summarization</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card" data-reveal>
-            <div class="project-visual project-shot shot-expense" aria-hidden="true">
-              <span>Finance</span>
-              <strong>Tracker 2026</strong>
-              <em>27 sheets + 15k formulas</em>
-            </div>
-            <div class="project-body">
-              <p>Python automation</p>
-              <h3>Expense Tracker 2026</h3>
-              <span>Multi-currency finance tracker generated with Python and openpyxl: 27 sheets, 15k+ formulas, charts, budgets, FX, debt, and savings logic.</span>
-              <div class="project-links" aria-label="Expense Tracker 2026 links">
-                <a class="button secondary" href="https://github.com/saisarantottempudi/expense-tracker-2026" target="_blank" rel="noreferrer">saisarantottempudi/expense-tracker-2026</a>
               </div>
             </div>
           </article>
@@ -254,84 +288,69 @@
             <div class="project-body">
               <p>F1 analytics AI</p>
               <h3>F1 Analytics AI</h3>
-              <span>End-to-end Formula 1 analytics platform with FastF1 data, PyTorch LSTM, Monte Carlo race simulation, reinforcement learning, RAG, FastAPI, Streamlit, and Plotly.</span>
+              <span>End-to-end Formula 1 platform: FastF1 data, PyTorch LSTM race prediction, Monte Carlo simulation, reinforcement-learning pit strategy, RAG layer, FastAPI, and a Streamlit lap-replay frontend.</span>
               <div class="project-links" aria-label="F1 Analytics AI links">
                 <a class="button secondary" href="https://github.com/saisarantottempudi/f1_analytics" target="_blank" rel="noreferrer">saisarantottempudi/f1_analytics</a>
               </div>
             </div>
           </article>
           <article class="project-card" data-reveal>
-            <div class="project-visual project-shot shot-strategy" aria-hidden="true">
-              <span>Strategy</span>
-              <strong>Pit Engine</strong>
-              <em>FastF1 + simulation</em>
+            <div class="project-visual project-shot shot-telugu" aria-hidden="true">
+              <span>NLP</span>
+              <strong>Telugu Summary</strong>
+              <em>mBERT + T5 + XLNet</em>
             </div>
             <div class="project-body">
-              <p>F1 strategy engine</p>
-              <h3>F1 AI Strategy Engine</h3>
-              <span>Terminal-first F1 pit strategy engine using FastF1 ingestion, medallion data architecture, scikit-learn regression, Monte Carlo simulation, FastAPI, and CLI workflows.</span>
-              <div class="project-links" aria-label="F1 AI Strategy Engine links">
-                <a class="button secondary" href="https://github.com/saisarantottempudi/f1_ai_strategy_engine" target="_blank" rel="noreferrer">saisarantottempudi/f1_ai_strategy_engine</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card" data-reveal>
-            <div class="project-visual project-shot shot-recipe" aria-hidden="true">
-              <span>RL</span>
-              <strong>Recipe Optimizer</strong>
-              <em>PPO + VAE + RAG</em>
-            </div>
-            <div class="project-body">
-              <p>Reinforcement learning</p>
-              <h3>Recipe Optimizer</h3>
-              <span>PPO agent in a custom Gymnasium environment for food production planning, combining Stable Baselines3, PyTorch VAE reward shaping, ChromaDB RAG caching, and GPT-4o, Claude, and Llama 3 comparisons.</span>
-              <div class="project-links" aria-label="Recipe Optimizer links">
-                <a class="button secondary" href="https://github.com/saisarantottempudi/msc-rl-recipe-optimizer" target="_blank" rel="noreferrer">saisarantottempudi/msc-rl-recipe-optimizer</a>
+              <p>NLP research</p>
+              <h3>Telugu Text Summarization</h3>
+              <span>Transformer comparison for low-resource Telugu summarization — mBERT (BLEU 0.456, ROUGE-1 0.72) outperformed English-only models 6×, showing multilingual pretraining beats architecture choice.</span>
+              <div class="project-links" aria-label="Telugu Text Summarization links">
+                <a class="button secondary" href="https://github.com/saisarantottempudi/telugu-text-summarization" target="_blank" rel="noreferrer">saisarantottempudi/telugu-text-summarization</a>
               </div>
             </div>
           </article>
           <article class="project-card" data-reveal aria-hidden="true">
-            <div class="project-visual project-shot shot-documind" aria-hidden="true">
-              <span>RAG</span>
-              <strong>DocuMind</strong>
-              <em>PDF -> embeddings -> answer</em>
+            <div class="project-visual project-shot shot-readmit" aria-hidden="true">
+              <span>MLOps</span>
+              <strong>readmit-ai</strong>
+              <em>train -> monitor -> retrain</em>
             </div>
             <div class="project-body">
-              <p>RAG + MLOps</p>
-              <h3>DocuMind</h3>
-              <span>Production RAG document Q&amp;A system with FastAPI, LangChain, ChromaDB, Redis, Docker, Kubernetes, Helm, Terraform, Prometheus, and Grafana.</span>
-              <div class="project-links" aria-label="DocuMind duplicate project links">
-                <a class="button secondary" tabindex="-1" href="https://github.com/saisarantottempudi/documind" target="_blank" rel="noreferrer">saisarantottempudi/documind</a>
+              <p>End-to-end MLOps</p>
+              <h3>readmit-ai</h3>
+              <span>Hospital readmission risk platform with the full automated lifecycle: pandera-validated ingest, XGBoost + SHAP, MLflow champion/challenger registry, Evidently drift detection, and auto-retrain — eight containers, one compose file.</span>
+              <div class="project-links" aria-label="readmit-ai duplicate project links">
+                <a class="button secondary" tabindex="-1" href="https://github.com/saisarantottempudi/readmit-ai" target="_blank" rel="noreferrer">saisarantottempudi/readmit-ai</a>
               </div>
             </div>
           </article>
           <article class="project-card" data-reveal aria-hidden="true">
-            <div class="project-visual project-shot shot-serverless" aria-hidden="true">
-              <span>GCP</span>
-              <strong>Image API</strong>
-              <em>GCS -> TFLite -> GPT</em>
+            <div class="project-visual project-shot shot-quant" aria-hidden="true">
+              <span>Quant</span>
+              <strong>QuantForge</strong>
+              <em>any language -> backtest</em>
             </div>
             <div class="project-body">
-              <p>Serverless ML</p>
-              <h3>Serverless Image Recognition API</h3>
-              <span>Event-driven GCP Cloud Functions Gen2 pipeline that classifies images with MobileNetV2 TFLite, generates captions with OpenAI GPT, and writes JSON results to Cloud Storage.</span>
-              <div class="project-links" aria-label="Serverless Image Recognition duplicate links">
-                <a class="button secondary" tabindex="-1" href="https://github.com/saisarantottempudi/serverless_image_rec" target="_blank" rel="noreferrer">saisarantottempudi/serverless_image_rec</a>
+              <p>Backtesting engine</p>
+              <h3>QuantForge</h3>
+              <span>Language-agnostic backtesting and paper trading engine — write strategies in Python, Go, or TypeScript over WebSocket; the engine handles data, fills with slippage and fees, and reports Sharpe, drawdown, and VaR.</span>
+              <div class="project-links" aria-label="QuantForge duplicate links">
+                <a class="button secondary" tabindex="-1" href="https://github.com/saisarantottempudi/quantforge" target="_blank" rel="noreferrer">saisarantottempudi/quantforge</a>
               </div>
             </div>
           </article>
           <article class="project-card" data-reveal aria-hidden="true">
-            <div class="project-visual project-shot shot-glm" aria-hidden="true">
-              <span>GLM</span>
-              <strong>Claims Model</strong>
-              <em>Frequency x severity</em>
+            <div class="project-visual project-shot shot-finsight" aria-hidden="true">
+              <span>Fintech</span>
+              <strong>FinSight</strong>
+              <em>risk + fraud, live</em>
             </div>
             <div class="project-body">
-              <p>Insurance data science</p>
-              <h3>Healthcare Claims GLM</h3>
-              <span>Poisson + Gamma GLM insurance pricing project with pure premium modelling, Gini 0.60, FastAPI serving, MLflow, Docker, and 77 tests.</span>
-              <div class="project-links" aria-label="Healthcare Claims GLM duplicate links">
-                <a class="button secondary" tabindex="-1" href="https://github.com/saisarantottempudi/healthcare-claims-glm" target="_blank" rel="noreferrer">saisarantottempudi/healthcare-claims-glm</a>
+              <p>Cloud-native platform</p>
+              <h3>FinSight</h3>
+              <span>Real-time portfolio risk (VaR, Sharpe, drawdown) and IsolationForest fraud scoring on live market data — deployed to an Oracle Cloud ARM k3s cluster with Grafana Cloud observability, entirely on free tiers.</span>
+              <div class="project-links" aria-label="FinSight duplicate links">
+                <a class="button secondary" tabindex="-1" href="https://github.com/saisarantottempudi/finsight" target="_blank" rel="noreferrer">saisarantottempudi/finsight</a>
               </div>
             </div>
           </article>
@@ -390,12 +409,12 @@
           <div data-reveal>
             <span>02</span>
             <h3>Build</h3>
-            <p>Create lean automations, EDA notebooks, APIs, and ML workflows that can be tested against real use cases.</p>
+            <p>Create validated pipelines, model registries, APIs, and ML workflows that can be tested against real use cases.</p>
           </div>
           <div data-reveal>
             <span>03</span>
-            <h3>Deploy</h3>
-            <p>Containerise, test, document, and improve the workflow so it can be used reliably beyond the first demo.</p>
+            <h3>Operate</h3>
+            <p>Containerise, monitor for drift, retrain safely, and document — so the system keeps working long after the first demo.</p>
           </div>
         </div>
       </section>
@@ -403,26 +422,33 @@
       <section class="section stack" id="stack">
         <div class="section-heading" data-reveal>
           <p class="eyebrow">Stack</p>
-          <h2>Tools I use for AI experiments, data workflows, and deployable systems.</h2>
+          <h2>Tools I use for production ML, data workflows, and deployable systems.</h2>
         </div>
         <div class="stack-marquee" data-reveal aria-label="Technology stack">
           <div>
             <span>Python</span>
             <span>SQL</span>
             <span>FastAPI</span>
+            <span>MLflow</span>
+            <span>Prefect</span>
+            <span>Evidently</span>
+            <span>XGBoost</span>
             <span>LangChain</span>
             <span>ChromaDB</span>
-            <span>Redis</span>
+            <span>Ollama</span>
+            <span>MCP</span>
             <span>PyTorch</span>
             <span>Hugging Face</span>
             <span>scikit-learn</span>
-            <span>statsmodels</span>
             <span>LightGBM</span>
-            <span>MLflow</span>
+            <span>Redis</span>
+            <span>PostgreSQL</span>
             <span>Docker</span>
             <span>Kubernetes</span>
             <span>Helm</span>
             <span>Terraform</span>
+            <span>Prometheus</span>
+            <span>Grafana</span>
             <span>GitHub Actions</span>
             <span>React</span>
             <span>TypeScript</span>
@@ -431,19 +457,26 @@
             <span>Python</span>
             <span>SQL</span>
             <span>FastAPI</span>
+            <span>MLflow</span>
+            <span>Prefect</span>
+            <span>Evidently</span>
+            <span>XGBoost</span>
             <span>LangChain</span>
             <span>ChromaDB</span>
-            <span>Redis</span>
+            <span>Ollama</span>
+            <span>MCP</span>
             <span>PyTorch</span>
             <span>Hugging Face</span>
             <span>scikit-learn</span>
-            <span>statsmodels</span>
             <span>LightGBM</span>
-            <span>MLflow</span>
+            <span>Redis</span>
+            <span>PostgreSQL</span>
             <span>Docker</span>
             <span>Kubernetes</span>
             <span>Helm</span>
             <span>Terraform</span>
+            <span>Prometheus</span>
+            <span>Grafana</span>
             <span>GitHub Actions</span>
             <span>React</span>
             <span>TypeScript</span>
@@ -454,7 +487,7 @@
       <section class="section contact" id="contact">
         <div class="contact-inner" data-reveal>
           <p class="eyebrow">Let&apos;s build</p>
-          <h2>Interested in AI, data science, MLOps, or automation work in London?</h2>
+          <h2>Interested in ML engineering, MLOps, data, or AI systems work in the UK?</h2>
           <div class="contact-actions">
             <a class="button primary" href="mailto:tottempudisaisaran@gmail.com">tottempudisaisaran@gmail.com</a>
             <a class="button secondary" href="tel:+447931813086">+44 7931 813086</a>

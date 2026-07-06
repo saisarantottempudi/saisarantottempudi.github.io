@@ -11,6 +11,9 @@
   --blue: #72b8ff;
   --bg: #090d0f;
   --radius: 8px;
+  --display: "Fraunces", Georgia, serif;
+  --body: "Instrument Sans", system-ui, sans-serif;
+  --mono: "Spline Sans Mono", ui-monospace, monospace;
 }
 
 * {
@@ -29,8 +32,17 @@ body {
     radial-gradient(circle at 90% 20%, rgba(255, 143, 112, 0.1), transparent 34rem),
     linear-gradient(135deg, #080b0d 0%, #111514 44%, #080d11 100%);
   color: var(--ink);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: var(--body);
   overflow-x: hidden;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 a {
@@ -79,8 +91,8 @@ a {
   background: var(--ink);
   color: #09100e;
   font-size: 0.92rem;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 800;
+  font-family: var(--mono);
+  font-weight: 700;
 }
 
 .nav-links {
@@ -175,9 +187,10 @@ a {
 .publication-card p {
   margin: 0 0 14px;
   color: var(--green);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -190,9 +203,10 @@ p {
 
 h1,
 h2 {
-  font-family: "Space Grotesk", Inter, sans-serif;
-  line-height: 0.98;
-  letter-spacing: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
 }
 
 h1 {
@@ -213,7 +227,8 @@ h2 {
 }
 
 h3 {
-  font-family: "Space Grotesk", Inter, sans-serif;
+  font-family: var(--display);
+  font-weight: 600;
   font-size: clamp(1.15rem, 1.55vw, 1.55rem);
 }
 
@@ -254,9 +269,16 @@ h3 {
 
 .hero-panel strong {
   display: block;
-  font-family: "Space Grotesk", Inter, sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.14rem;
+  line-height: 1.32;
+}
+
+.hero-panel code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  color: var(--green);
 }
 
 .signal-row {
@@ -310,7 +332,8 @@ h3 {
 
 .metrics strong {
   display: block;
-  font-family: "Space Grotesk", Inter, sans-serif;
+  font-family: var(--display);
+  font-weight: 600;
   font-size: clamp(2.15rem, 4.2vw, 3.55rem);
   line-height: 1;
 }
@@ -358,13 +381,16 @@ h3 {
   display: block;
   margin-bottom: 16px;
   color: var(--green);
-  font-size: 0.76rem;
-  font-weight: 800;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .profile-strip strong {
-  font-family: "Space Grotesk", Inter, sans-serif;
+  font-family: var(--display);
+  font-weight: 600;
   font-size: 1.15rem;
   line-height: 1.3;
 }
@@ -540,25 +566,28 @@ h3 {
 
 .project-shot span {
   color: var(--green);
-  font-size: 0.7rem;
-  font-weight: 900;
-  letter-spacing: 0;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .project-shot strong {
   max-width: 72%;
   color: var(--ink);
-  font-family: "Space Grotesk", Inter, sans-serif;
+  font-family: var(--display);
+  font-weight: 600;
   font-size: clamp(1.04rem, 1.7vw, 1.32rem);
   line-height: 1;
 }
 
 .project-shot em {
   color: rgba(247, 243, 234, 0.72);
-  font-size: 0.78rem;
+  font-family: var(--mono);
+  font-size: 0.74rem;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .shot-documind {
@@ -604,6 +633,53 @@ h3 {
     linear-gradient(115deg, rgba(255, 143, 112, 0.5), transparent 48%),
     repeating-linear-gradient(90deg, rgba(247, 243, 234, 0.16) 0 8px, transparent 8px 16px),
     #101414;
+}
+
+.shot-readmit {
+  background:
+    repeating-linear-gradient(-45deg, rgba(141, 240, 199, 0.12) 0 10px, transparent 10px 20px),
+    radial-gradient(circle at 22% 28%, rgba(141, 240, 199, 0.6), transparent 11rem),
+    radial-gradient(circle at 84% 78%, rgba(114, 184, 255, 0.4), transparent 11rem),
+    #0e1614;
+}
+
+.shot-quant {
+  background:
+    linear-gradient(0deg, rgba(141, 240, 199, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(141, 240, 199, 0.14) 1px, transparent 1px),
+    linear-gradient(160deg, rgba(245, 200, 106, 0.4), transparent 55%),
+    #101418;
+  background-size: 28px 28px, 28px 28px, auto, auto;
+}
+
+.shot-finsight {
+  background:
+    repeating-radial-gradient(circle at 74% 34%, rgba(247, 243, 234, 0.16) 0 1px, transparent 1px 22px),
+    radial-gradient(circle at 74% 34%, rgba(245, 200, 106, 0.56), transparent 12rem),
+    radial-gradient(circle at 18% 82%, rgba(141, 240, 199, 0.4), transparent 10rem),
+    #121514;
+}
+
+.shot-mcp {
+  background:
+    linear-gradient(135deg, rgba(114, 184, 255, 0.4), transparent 52%),
+    repeating-linear-gradient(0deg, rgba(247, 243, 234, 0.08) 0 2px, transparent 2px 14px),
+    radial-gradient(circle at 80% 24%, rgba(141, 240, 199, 0.44), transparent 10rem),
+    #0f1318;
+}
+
+.shot-llmscope {
+  background:
+    repeating-linear-gradient(90deg, rgba(141, 240, 199, 0.24) 0 3px, transparent 3px 18px),
+    linear-gradient(180deg, transparent 40%, rgba(255, 143, 112, 0.28)),
+    #101413;
+}
+
+.shot-mickey {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(114, 184, 255, 0.62), transparent 9rem),
+    repeating-radial-gradient(circle at 50% 42%, rgba(247, 243, 234, 0.14) 0 1px, transparent 1px 18px),
+    #0d1117;
 }
 
 .project-body {
