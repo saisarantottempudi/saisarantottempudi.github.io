@@ -3,14 +3,11 @@ const ctx = canvas.getContext("2d");
 const cursor = document.querySelector(".cursor-dot");
 const reveals = document.querySelectorAll("[data-reveal]");
 const counters = document.querySelectorAll("[data-count]");
-const projectCarousel = document.querySelector(".project-carousel");
 
 let width = 0;
 let height = 0;
 let particles = [];
 let pointer = { x: 0.72, y: 0.4 };
-let projectCarouselPaused = false;
-let projectCarouselResumeTimer;
 
 function resizeCanvas() {
   const ratio = Math.min(window.devicePixelRatio || 1, 2);
@@ -37,9 +34,9 @@ function drawCanvas() {
   const gx = pointer.x * width;
   const gy = pointer.y * height;
   const gradient = ctx.createRadialGradient(gx, gy, 20, gx, gy, Math.max(width, height) * 0.72);
-  gradient.addColorStop(0, "rgba(141, 240, 199, 0.28)");
-  gradient.addColorStop(0.38, "rgba(255, 143, 112, 0.18)");
-  gradient.addColorStop(1, "rgba(9, 13, 15, 0)");
+  gradient.addColorStop(0, "rgba(34, 197, 94, 0.26)");
+  gradient.addColorStop(0.38, "rgba(167, 139, 250, 0.16)");
+  gradient.addColorStop(1, "rgba(15, 23, 42, 0)");
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, width, height);
 
@@ -53,9 +50,9 @@ function drawCanvas() {
     if (particle.y > height + 20) particle.y = -20;
 
     const palette = [
-      "rgba(141, 240, 199, 0.72)",
-      "rgba(255, 143, 112, 0.58)",
-      "rgba(114, 184, 255, 0.62)",
+      "rgba(34, 197, 94, 0.72)",
+      "rgba(250, 204, 21, 0.55)",
+      "rgba(167, 139, 250, 0.62)",
     ];
 
     ctx.beginPath();
@@ -70,7 +67,7 @@ function drawCanvas() {
         ctx.beginPath();
         ctx.moveTo(particle.x, particle.y);
         ctx.lineTo(next.x, next.y);
-        ctx.strokeStyle = `rgba(247, 243, 234, ${0.12 - distance / 1100})`;
+        ctx.strokeStyle = `rgba(248, 250, 252, ${0.12 - distance / 1100})`;
         ctx.lineWidth = 1;
         ctx.stroke();
       }
@@ -117,48 +114,6 @@ const observer = new IntersectionObserver(
 
 reveals.forEach((element) => observer.observe(element));
 counters.forEach((counter) => observer.observe(counter));
-
-function pauseProjectCarousel(delay = 1400) {
-  projectCarouselPaused = true;
-  window.clearTimeout(projectCarouselResumeTimer);
-  projectCarouselResumeTimer = window.setTimeout(() => {
-    projectCarouselPaused = false;
-  }, delay);
-}
-
-function autoScrollProjects() {
-  if (!projectCarousel) return;
-
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const maxScroll = projectCarousel.scrollWidth - projectCarousel.clientWidth;
-
-  if (!projectCarouselPaused && !reduceMotion && maxScroll > 0) {
-    projectCarousel.scrollLeft += 0.32;
-    if (projectCarousel.scrollLeft >= maxScroll - 2) {
-      projectCarousel.scrollTo({ left: 0, behavior: "auto" });
-    }
-  }
-
-  requestAnimationFrame(autoScrollProjects);
-}
-
-if (projectCarousel) {
-  projectCarousel.addEventListener("pointerenter", () => {
-    projectCarouselPaused = true;
-  });
-  projectCarousel.addEventListener("pointerleave", () => {
-    projectCarouselPaused = false;
-  });
-  projectCarousel.addEventListener("focusin", () => {
-    projectCarouselPaused = true;
-  });
-  projectCarousel.addEventListener("focusout", () => {
-    projectCarouselPaused = false;
-  });
-  projectCarousel.addEventListener("wheel", () => pauseProjectCarousel(), { passive: true });
-  projectCarousel.addEventListener("touchstart", () => pauseProjectCarousel(2200), { passive: true });
-  requestAnimationFrame(autoScrollProjects);
-}
 
 window.addEventListener("pointermove", (event) => {
   pointer = {
