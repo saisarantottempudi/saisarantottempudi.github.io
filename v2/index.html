@@ -125,7 +125,8 @@
           <p class="eyebrow">Selected work</p>
           <h2>Real systems from my GitHub — shipped, containerised, monitored.</h2>
         </div>
-        <div class="project-grid" aria-label="Project grid">
+        <div class="project-carousel" data-reveal>
+          <div class="carousel-track" data-carousel-track aria-label="Project carousel" tabindex="0">
           <article class="project-card" data-reveal>
             <div class="project-visual project-shot shot-readmit" aria-hidden="true">
               <span>MLOps</span>
@@ -308,6 +309,12 @@
               </div>
             </div>
           </article>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous projects">&larr;</button>
+            <div class="carousel-progress" aria-hidden="true"><span data-carousel-bar></span></div>
+            <button class="carousel-btn" type="button" data-carousel-next aria-label="Next projects">&rarr;</button>
+          </div>
         </div>
       </section>
 

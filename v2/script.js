@@ -205,3 +205,48 @@ document.querySelectorAll("a, button").forEach((element) => {
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 drawScene();
+
+const carouselTrack = document.querySelector("[data-carousel-track]");
+const carouselPrev = document.querySelector("[data-carousel-prev]");
+const carouselNext = document.querySelector("[data-carousel-next]");
+const carouselBar = document.querySelector("[data-carousel-bar]");
+
+if (carouselTrack && carouselPrev && carouselNext && carouselBar) {
+  const cardStep = () => {
+    const card = carouselTrack.querySelector(".project-card");
+    return card ? card.offsetWidth + 20 : carouselTrack.clientWidth;
+  };
+
+  const updateCarousel = () => {
+    const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth;
+    const progress = maxScroll > 0 ? carouselTrack.scrollLeft / maxScroll : 1;
+    const visible = carouselTrack.clientWidth / carouselTrack.scrollWidth;
+    carouselBar.style.width = `${Math.max(visible * 100, 8)}%`;
+    carouselBar.style.left = `${progress * (100 - Math.max(visible * 100, 8))}%`;
+    carouselPrev.disabled = carouselTrack.scrollLeft <= 4;
+    carouselNext.disabled = carouselTrack.scrollLeft >= maxScroll - 4;
+  };
+
+  carouselPrev.addEventListener("click", () => {
+    carouselTrack.scrollBy({ left: -cardStep(), behavior: "smooth" });
+  });
+
+  carouselNext.addEventListener("click", () => {
+    carouselTrack.scrollBy({ left: cardStep(), behavior: "smooth" });
+  });
+
+  carouselTrack.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      carouselTrack.scrollBy({ left: -cardStep(), behavior: "smooth" });
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      carouselTrack.scrollBy({ left: cardStep(), behavior: "smooth" });
+    }
+  });
+
+  carouselTrack.addEventListener("scroll", updateCarousel, { passive: true });
+  window.addEventListener("resize", updateCarousel);
+  updateCarousel();
+}
